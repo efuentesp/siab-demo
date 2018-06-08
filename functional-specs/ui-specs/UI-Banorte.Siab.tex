@@ -1,0 +1,1854 @@
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Moneda
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Moneda} \label{sec:cf-ui-admin-moneda}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Moneda} \label{sec:ui-page-search-moneda}
+
+\textbf{Descripción}: Página para Buscar Moneda.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-moneda-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Moneda}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-moneda-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-moneda-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Código &
+		TextBox &
+		Integer &
+		Moneda.MonedaNum \\
+		Nombre &
+		TextBox &
+		Text &
+		Moneda.MonedaNombre \\
+		Abreviación &
+		TextBox &
+		Text &
+		Moneda.MonedaAbrev \\
+		Estatus &
+		Modal &
+		Entity &
+		Moneda.MonedaStatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-moneda-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Código &
+		Moneda.MonedaNum \\
+		Nombre &
+		Moneda.MonedaNombre \\
+		Abreviación &
+		Moneda.MonedaAbrev \\
+		Estatus &
+		Moneda.MonedaStatus \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Moneda} \label{sec:ui-page-create-moneda}
+
+\textbf{Descripción}: Página para Crear Moneda.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-moneda-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Moneda}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Moneda}
+	\label{tab:ui-create-moneda-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Código &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		Moneda.MonedaNum \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Moneda.MonedaNombre \\
+		Abreviación &
+		TextBox &
+		Text &
+		 &
+		Moneda.MonedaAbrev \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		Moneda.MonedaStatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Moneda} \label{sec:ui-page-update-moneda}
+
+\textbf{Descripción}: Página para Editar Moneda.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-moneda-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Moneda}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Moneda}
+	\label{tab:ui-update-moneda-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Código &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		Moneda.MonedaNum \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Moneda.MonedaNombre \\
+		Abreviación &
+		TextBox &
+		Text &
+		 &
+		Moneda.MonedaAbrev \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		Moneda.MonedaStatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Moneda} \label{sec:ui-page-delete-moneda}
+
+\textbf{Descripción}: Página para Eliminar Moneda.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-moneda-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Moneda}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Moneda}
+	\label{tab:ui-delete-moneda-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Código &
+		Label &
+		Integer &
+		&
+		Moneda.MonedaNum \\
+		Nombre &
+		Label &
+		Text &
+		&
+		Moneda.MonedaNombre \\
+		Abreviación &
+		Label &
+		Text &
+		&
+		Moneda.MonedaAbrev \\
+		Estatus &
+		Label &
+		Entity &
+		&
+		Moneda.MonedaStatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: EntidadFederativa
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Entidad Federativa} \label{sec:cf-ui-admin-entidadfederativa}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Entidad Federativa} \label{sec:ui-page-search-entidadfederativa}
+
+\textbf{Descripción}: Página para Buscar Entidad Federativa.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-entidadfederativa-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Entidad Federativa}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-entidadfederativa-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-entidadfederativa-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Text &
+		EntidadFederativa.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		EntidadFederativa.Nombre \\
+		Abreviatura &
+		TextBox &
+		Text &
+		EntidadFederativa.Abreviatura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-entidadfederativa-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		EntidadFederativa.Clave \\
+		Nombre &
+		EntidadFederativa.Nombre \\
+		Abreviatura &
+		EntidadFederativa.Abreviatura \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Entidad Federativa} \label{sec:ui-page-create-entidadfederativa}
+
+\textbf{Descripción}: Página para Crear Entidad Federativa.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-entidadfederativa-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Entidad Federativa}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Entidad Federativa}
+	\label{tab:ui-create-entidadfederativa-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		EntidadFederativa.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		EntidadFederativa.Nombre \\
+		Abreviatura &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		EntidadFederativa.Abreviatura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Entidad Federativa} \label{sec:ui-page-update-entidadfederativa}
+
+\textbf{Descripción}: Página para Editar Entidad Federativa.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-entidadfederativa-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Entidad Federativa}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Entidad Federativa}
+	\label{tab:ui-update-entidadfederativa-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		EntidadFederativa.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		EntidadFederativa.Nombre \\
+		Abreviatura &
+		TextBox &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		EntidadFederativa.Abreviatura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Entidad Federativa} \label{sec:ui-page-delete-entidadfederativa}
+
+\textbf{Descripción}: Página para Eliminar Entidad Federativa.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-entidadfederativa-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Entidad Federativa}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Entidad Federativa}
+	\label{tab:ui-delete-entidadfederativa-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		Label &
+		Text &
+		&
+		EntidadFederativa.Clave \\
+		Nombre &
+		Label &
+		Text &
+		&
+		EntidadFederativa.Nombre \\
+		Abreviatura &
+		Label &
+		Text &
+		&
+		EntidadFederativa.Abreviatura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Municipio
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Municipio} \label{sec:cf-ui-admin-municipio}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Municipio} \label{sec:ui-page-search-municipio}
+
+\textbf{Descripción}: Página para Buscar Municipio.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-municipio-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Municipio}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-municipio-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-municipio-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		Municipio.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		Municipio.Nombre \\
+		Entidad Federativa &
+		Modal &
+		Entity &
+		Municipio.Entidad \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-municipio-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		Municipio.Clave \\
+		Nombre &
+		Municipio.Nombre \\
+		Entidad Federativa &
+		Municipio.Entidad \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Municipio} \label{sec:ui-page-create-municipio}
+
+\textbf{Descripción}: Página para Crear Municipio.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-municipio-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Municipio}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Municipio}
+	\label{tab:ui-create-municipio-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Municipio.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Municipio.Nombre \\
+		Entidad Federativa &
+		Modal &
+		Entity &
+		 &
+		Municipio.Entidad \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Municipio} \label{sec:ui-page-update-municipio}
+
+\textbf{Descripción}: Página para Editar Municipio.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-municipio-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Municipio}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Municipio}
+	\label{tab:ui-update-municipio-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Municipio.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Municipio.Nombre \\
+		Entidad Federativa &
+		Modal &
+		Entity &
+		 &
+		Municipio.Entidad \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Municipio} \label{sec:ui-page-delete-municipio}
+
+\textbf{Descripción}: Página para Eliminar Municipio.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-municipio-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Municipio}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Municipio}
+	\label{tab:ui-delete-municipio-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		Label &
+		Integer &
+		&
+		Municipio.Clave \\
+		Nombre &
+		Label &
+		Text &
+		&
+		Municipio.Nombre \\
+		Entidad Federativa &
+		Label &
+		Entity &
+		&
+		Municipio.Entidad \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: Localidad
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Localidad} \label{sec:cf-ui-admin-localidad}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Localidad} \label{sec:ui-page-search-localidad}
+
+\textbf{Descripción}: Página para Buscar Localidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-localidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Localidad}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-localidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-localidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		Localidad.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		Localidad.Nombre \\
+		Municipio &
+		Modal &
+		Entity &
+		Localidad.Municipio \\
+		Clave Origen &
+		TextBox &
+		Text &
+		Localidad.ClaveOrigen \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-localidad-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		Localidad.Clave \\
+		Nombre &
+		Localidad.Nombre \\
+		Municipio &
+		Localidad.Municipio \\
+		Clave Origen &
+		Localidad.ClaveOrigen \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Localidad} \label{sec:ui-page-create-localidad}
+
+\textbf{Descripción}: Página para Crear Localidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-localidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Localidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Localidad}
+	\label{tab:ui-create-localidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Localidad.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Localidad.Nombre \\
+		Municipio &
+		Modal &
+		Entity &
+		 &
+		Localidad.Municipio \\
+		Clave Origen &
+		TextBox &
+		Text &
+		 &
+		Localidad.ClaveOrigen \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Localidad} \label{sec:ui-page-update-localidad}
+
+\textbf{Descripción}: Página para Editar Localidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-localidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Localidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Localidad}
+	\label{tab:ui-update-localidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		TextBox &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Localidad.Clave \\
+		Nombre &
+		TextBox &
+		Text &
+		 &
+		Localidad.Nombre \\
+		Municipio &
+		Modal &
+		Entity &
+		 &
+		Localidad.Municipio \\
+		Clave Origen &
+		TextBox &
+		Text &
+		 &
+		Localidad.ClaveOrigen \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Localidad} \label{sec:ui-page-delete-localidad}
+
+\textbf{Descripción}: Página para Eliminar Localidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-localidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Localidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Localidad}
+	\label{tab:ui-delete-localidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Clave &
+		Label &
+		Integer &
+		&
+		Localidad.Clave \\
+		Nombre &
+		Label &
+		Text &
+		&
+		Localidad.Nombre \\
+		Municipio &
+		Label &
+		Entity &
+		&
+		Localidad.Municipio \\
+		Clave Origen &
+		Label &
+		Text &
+		&
+		Localidad.ClaveOrigen \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: TipoCambioFacturacion
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Tipo de Cambio para Facturación} \label{sec:cf-ui-admin-tipocambiofacturacion}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Tipo de Cambio para Facturación} \label{sec:ui-page-search-tipocambiofacturacion}
+
+\textbf{Descripción}: Página para Buscar Tipo de Cambio para Facturación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-tipocambiofacturacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Tipo de Cambio para Facturación}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-tipocambiofacturacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-tipocambiofacturacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		TipoCambioFacturacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		TipoCambioFacturacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		TipoCambioFacturacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-tipocambiofacturacion-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		TipoCambioFacturacion.Fecha \\
+		Tipo de Cambio &
+		TipoCambioFacturacion.Moneda \\
+		Estatus &
+		TipoCambioFacturacion.Estatus \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Tipo de Cambio para Facturación} \label{sec:ui-page-create-tipocambiofacturacion}
+
+\textbf{Descripción}: Página para Crear Tipo de Cambio para Facturación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-tipocambiofacturacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Tipo de Cambio para Facturación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Tipo de Cambio para Facturación}
+	\label{tab:ui-create-tipocambiofacturacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		 &
+		TipoCambioFacturacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		 &
+		TipoCambioFacturacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		TipoCambioFacturacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Tipo de Cambio para Facturación} \label{sec:ui-page-update-tipocambiofacturacion}
+
+\textbf{Descripción}: Página para Editar Tipo de Cambio para Facturación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-tipocambiofacturacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Tipo de Cambio para Facturación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Tipo de Cambio para Facturación}
+	\label{tab:ui-update-tipocambiofacturacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		 &
+		TipoCambioFacturacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		 &
+		TipoCambioFacturacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		TipoCambioFacturacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Tipo de Cambio para Facturación} \label{sec:ui-page-delete-tipocambiofacturacion}
+
+\textbf{Descripción}: Página para Eliminar Tipo de Cambio para Facturación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-tipocambiofacturacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Tipo de Cambio para Facturación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Tipo de Cambio para Facturación}
+	\label{tab:ui-delete-tipocambiofacturacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		Label &
+		Date &
+		&
+		TipoCambioFacturacion.Fecha \\
+		Tipo de Cambio &
+		Label &
+		Entity &
+		&
+		TipoCambioFacturacion.Moneda \\
+		Estatus &
+		Label &
+		Entity &
+		&
+		TipoCambioFacturacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: TipoCambioCertificacion
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Tipo de Cambio para Certificación} \label{sec:cf-ui-admin-tipocambiocertificacion}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Tipo de Cambio para Certificación} \label{sec:ui-page-search-tipocambiocertificacion}
+
+\textbf{Descripción}: Página para Buscar Tipo de Cambio para Certificación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-tipocambiocertificacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Tipo de Cambio para Certificación}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-tipocambiocertificacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-tipocambiocertificacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		TipoCambioCertificacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		TipoCambioCertificacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		TipoCambioCertificacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-tipocambiocertificacion-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		TipoCambioCertificacion.Fecha \\
+		Tipo de Cambio &
+		TipoCambioCertificacion.Moneda \\
+		Estatus &
+		TipoCambioCertificacion.Estatus \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Tipo de Cambio para Certificación} \label{sec:ui-page-create-tipocambiocertificacion}
+
+\textbf{Descripción}: Página para Crear Tipo de Cambio para Certificación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-tipocambiocertificacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Tipo de Cambio para Certificación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Tipo de Cambio para Certificación}
+	\label{tab:ui-create-tipocambiocertificacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		 &
+		TipoCambioCertificacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		 &
+		TipoCambioCertificacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		TipoCambioCertificacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Tipo de Cambio para Certificación} \label{sec:ui-page-update-tipocambiocertificacion}
+
+\textbf{Descripción}: Página para Editar Tipo de Cambio para Certificación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-tipocambiocertificacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Tipo de Cambio para Certificación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Tipo de Cambio para Certificación}
+	\label{tab:ui-update-tipocambiocertificacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		DatePicker &
+		Date &
+		 &
+		TipoCambioCertificacion.Fecha \\
+		Tipo de Cambio &
+		Modal &
+		Entity &
+		 &
+		TipoCambioCertificacion.Moneda \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		TipoCambioCertificacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Tipo de Cambio para Certificación} \label{sec:ui-page-delete-tipocambiocertificacion}
+
+\textbf{Descripción}: Página para Eliminar Tipo de Cambio para Certificación.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-tipocambiocertificacion-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Tipo de Cambio para Certificación}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Tipo de Cambio para Certificación}
+	\label{tab:ui-delete-tipocambiocertificacion-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Fecha &
+		Label &
+		Date &
+		&
+		TipoCambioCertificacion.Fecha \\
+		Tipo de Cambio &
+		Label &
+		Entity &
+		&
+		TipoCambioCertificacion.Moneda \\
+		Estatus &
+		Label &
+		Entity &
+		&
+		TipoCambioCertificacion.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: PolizaSeguro
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Póliza de Seguro} \label{sec:cf-ui-admin-polizaseguro}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Póliza de Seguro} \label{sec:ui-page-search-polizaseguro}
+
+\textbf{Descripción}: Página para Buscar Póliza de Seguro.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-polizaseguro-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Póliza de Seguro}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-polizaseguro-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-polizaseguro-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Número de Póliza &
+		TextBox &
+		Text &
+		PolizaSeguro.Numero \\
+		Nombre Aseguradora &
+		TextBox &
+		Text &
+		PolizaSeguro.Aseguradora \\
+		Vigencia &
+		DatePicker &
+		Date &
+		PolizaSeguro.Vigencia \\
+		Estatus &
+		Modal &
+		Entity &
+		PolizaSeguro.Estatus \\
+		Cobertura &
+		Modal &
+		Entity &
+		PolizaSeguro.Cobertura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-polizaseguro-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Número de Póliza &
+		PolizaSeguro.Numero \\
+		Nombre Aseguradora &
+		PolizaSeguro.Aseguradora \\
+		Vigencia &
+		PolizaSeguro.Vigencia \\
+		Estatus &
+		PolizaSeguro.Estatus \\
+		Cobertura &
+		PolizaSeguro.Cobertura \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Póliza de Seguro} \label{sec:ui-page-create-polizaseguro}
+
+\textbf{Descripción}: Página para Crear Póliza de Seguro.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-polizaseguro-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Póliza de Seguro}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Póliza de Seguro}
+	\label{tab:ui-create-polizaseguro-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Número de Póliza &
+		TextBox &
+		Text &
+		 &
+		PolizaSeguro.Numero \\
+		Nombre Aseguradora &
+		TextBox &
+		Text &
+		 &
+		PolizaSeguro.Aseguradora \\
+		Vigencia &
+		DatePicker &
+		Date &
+		 &
+		PolizaSeguro.Vigencia \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		PolizaSeguro.Estatus \\
+		Cobertura &
+		Modal &
+		Entity &
+		 &
+		PolizaSeguro.Cobertura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Póliza de Seguro} \label{sec:ui-page-update-polizaseguro}
+
+\textbf{Descripción}: Página para Editar Póliza de Seguro.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-polizaseguro-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Póliza de Seguro}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Póliza de Seguro}
+	\label{tab:ui-update-polizaseguro-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Número de Póliza &
+		TextBox &
+		Text &
+		 &
+		PolizaSeguro.Numero \\
+		Nombre Aseguradora &
+		TextBox &
+		Text &
+		 &
+		PolizaSeguro.Aseguradora \\
+		Vigencia &
+		DatePicker &
+		Date &
+		 &
+		PolizaSeguro.Vigencia \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		PolizaSeguro.Estatus \\
+		Cobertura &
+		Modal &
+		Entity &
+		 &
+		PolizaSeguro.Cobertura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Póliza de Seguro} \label{sec:ui-page-delete-polizaseguro}
+
+\textbf{Descripción}: Página para Eliminar Póliza de Seguro.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-polizaseguro-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Póliza de Seguro}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Póliza de Seguro}
+	\label{tab:ui-delete-polizaseguro-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Número de Póliza &
+		Label &
+		Text &
+		&
+		PolizaSeguro.Numero \\
+		Nombre Aseguradora &
+		Label &
+		Text &
+		&
+		PolizaSeguro.Aseguradora \\
+		Vigencia &
+		Label &
+		Date &
+		&
+		PolizaSeguro.Vigencia \\
+		Estatus &
+		Label &
+		Entity &
+		&
+		PolizaSeguro.Estatus \\
+		Cobertura &
+		Label &
+		Entity &
+		&
+		PolizaSeguro.Cobertura \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD UI: SerieEntidad
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Serie por Entidad} \label{sec:cf-ui-admin-serieentidad}
+
+%% -----
+%% User Interface: Search
+%% -----
+\subsection{IUXX-01. Buscar Serie por Entidad} \label{sec:ui-page-search-serieentidad}
+
+\textbf{Descripción}: Página para Buscar Serie por Entidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-search-serieentidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Buscar Serie por Entidad}
+\end{figure}
+
+\begin{figure}[H]
+	\label{tab:ui-nosearch-serieentidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: No Encontró información}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Criterios de Búsqueda}
+	\label{tab:ui-search-criteria-serieentidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{7cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Entidad &
+		Modal &
+		Entity &
+		SerieEntidad.Entidad \\
+		Serie &
+		TextBox &
+		Text &
+		SerieEntidad.Serie \\
+		Estatus &
+		Modal &
+		Entity &
+		SerieEntidad.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[H]
+	\caption{Forma: Resultados de Búsqueda}
+	\label{tab:ui-search-results-serieentidad-form}
+	%\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Entidad &
+		SerieEntidad.Entidad \\
+		Serie &
+		SerieEntidad.Serie \\
+		Estatus &
+		SerieEntidad.Estatus \\
+		\hline
+	\end{tabular}
+	%}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Create
+%% -----
+\subsection{IUXX-02. Crear Serie por Entidad} \label{sec:ui-page-create-serieentidad}
+
+\textbf{Descripción}: Página para Crear Serie por Entidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-create-serieentidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Crear Serie por Entidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Crear Serie por Entidad}
+	\label{tab:ui-create-serieentidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Entidad &
+		Modal &
+		Entity &
+		 &
+		SerieEntidad.Entidad \\
+		Serie &
+		TextBox &
+		Text &
+		 &
+		SerieEntidad.Serie \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		SerieEntidad.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Update
+%% -----
+\subsection{IUXX-03. Editar Serie por Entidad} \label{sec:ui-page-update-serieentidad}
+
+\textbf{Descripción}: Página para Editar Serie por Entidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-edit-serieentidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Editar Serie por Entidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Editar Serie por Entidad}
+	\label{tab:ui-update-serieentidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Entidad &
+		Modal &
+		Entity &
+		 &
+		SerieEntidad.Entidad \\
+		Serie &
+		TextBox &
+		Text &
+		 &
+		SerieEntidad.Serie \\
+		Estatus &
+		Modal &
+		Entity &
+		 &
+		SerieEntidad.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+\clearpage
+%% -----
+%% User Interface: Delete
+%% -----
+\subsection{IUXX-04. Eliminar Serie por Entidad} \label{sec:ui-page-delete-serieentidad}
+
+\textbf{Descripción}: Página para Eliminar Serie por Entidad.\\
+
+\begin{figure}[H]
+	\label{tab:ui-delete-serieentidad-page}
+	%\includegraphics[width=\linewidth]{ui-prototype/SucursalServices/CrearSucursalPage.png}
+	\caption{Página: Eliminar Serie por Entidad}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Forma: Eliminar Serie por Entidad}
+	\label{tab:ui-delete-serieentidad-form}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ p{4cm} p{2cm} p{2cm} p{3cm} p{8cm} }
+		\hline
+		\textbf{Etiqueta} &
+		\textbf{Widget} &
+		\textbf{Tipo} &
+		\textbf{Validaciones} &
+		\textbf{Fuente de Datos} \\
+		\hline
+		Entidad &
+		Label &
+		Entity &
+		&
+		SerieEntidad.Entidad \\
+		Serie &
+		Label &
+		Text &
+		&
+		SerieEntidad.Serie \\
+		Estatus &
+		Label &
+		Entity &
+		&
+		SerieEntidad.Estatus \\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+

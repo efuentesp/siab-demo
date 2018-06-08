@@ -1,0 +1,1512 @@
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: Moneda
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Moneda} \label{sec:cf-uc-admin-moneda}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Moneda} \label{sec:cu-search-Moneda}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Moneda.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Moneda (\ref{sec:ui-page-search-moneda})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Moneda (\ref{sec:ui-page-search-moneda})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-moneda-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-moneda-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-moneda-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-moneda-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-moneda-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-moneda-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Moneda} \label{sec:cu-create-Moneda}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear Moneda.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Moneda (\ref{sec:ui-page-create-moneda})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Moneda (\ref{sec:ui-page-create-moneda})].
+		\item El Operador captura información en la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Moneda].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Moneda (\ref{tab:ui-create-moneda-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Moneda} \label{sec:cu-update-Moneda}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Moneda.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Moneda (\ref{sec:ui-page-update-moneda})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Moneda (\ref{sec:cu-search-Moneda})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Moneda (\ref{sec:ui-page-update-moneda})].
+		\item El Operador modifica información en la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Moneda].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Moneda (\ref{tab:ui-update-moneda-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Moneda} \label{sec:cu-delete-Moneda}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar Moneda.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Moneda (\ref{tab:ui-delete-moneda-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Moneda (\ref{sec:cu-search-Moneda})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Moneda (\ref{tab:ui-delete-moneda-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Moneda].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: EntidadFederativa
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Entidad Federativa} \label{sec:cf-uc-admin-entidadfederativa}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Entidad Federativa} \label{sec:cu-search-EntidadFederativa}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Entidad Federativa.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Entidad Federativa (\ref{sec:ui-page-search-entidadfederativa})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Entidad Federativa (\ref{sec:ui-page-search-entidadfederativa})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-entidadfederativa-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-entidadfederativa-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-entidadfederativa-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-entidadfederativa-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-entidadfederativa-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-entidadfederativa-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Entidad Federativa} \label{sec:cu-create-EntidadFederativa}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear EntidadFederativa.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Entidad Federativa (\ref{sec:ui-page-create-entidadfederativa})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Entidad Federativa (\ref{sec:ui-page-create-entidadfederativa})].
+		\item El Operador captura información en la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Entidad Federativa].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Entidad Federativa (\ref{tab:ui-create-entidadfederativa-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Entidad Federativa} \label{sec:cu-update-EntidadFederativa}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Entidad Federativa.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Entidad Federativa (\ref{sec:ui-page-update-entidadfederativa})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Entidad Federativa (\ref{sec:cu-search-EntidadFederativa})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Entidad Federativa (\ref{sec:ui-page-update-entidadfederativa})].
+		\item El Operador modifica información en la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Entidad Federativa].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Entidad Federativa (\ref{tab:ui-update-entidadfederativa-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Entidad Federativa} \label{sec:cu-delete-EntidadFederativa}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar EntidadFederativa.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Entidad Federativa (\ref{tab:ui-delete-entidadfederativa-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Entidad Federativa (\ref{sec:cu-search-EntidadFederativa})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Entidad Federativa (\ref{tab:ui-delete-entidadfederativa-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Entidad Federativa].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: Municipio
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Municipio} \label{sec:cf-uc-admin-municipio}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Municipio} \label{sec:cu-search-Municipio}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Municipio.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Municipio (\ref{sec:ui-page-search-municipio})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Municipio (\ref{sec:ui-page-search-municipio})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-municipio-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-municipio-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-municipio-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-municipio-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-municipio-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-municipio-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Municipio} \label{sec:cu-create-Municipio}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear Municipio.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Municipio (\ref{sec:ui-page-create-municipio})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Municipio (\ref{sec:ui-page-create-municipio})].
+		\item El Operador captura información en la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Municipio].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Municipio (\ref{tab:ui-create-municipio-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Municipio} \label{sec:cu-update-Municipio}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Municipio.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Municipio (\ref{sec:ui-page-update-municipio})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Municipio (\ref{sec:cu-search-Municipio})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Municipio (\ref{sec:ui-page-update-municipio})].
+		\item El Operador modifica información en la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Municipio].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Municipio (\ref{tab:ui-update-municipio-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Municipio} \label{sec:cu-delete-Municipio}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar Municipio.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Municipio (\ref{tab:ui-delete-municipio-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Municipio (\ref{sec:cu-search-Municipio})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Municipio (\ref{tab:ui-delete-municipio-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Municipio].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: Localidad
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Localidad} \label{sec:cf-uc-admin-localidad}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Localidad} \label{sec:cu-search-Localidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Localidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Localidad (\ref{sec:ui-page-search-localidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Localidad (\ref{sec:ui-page-search-localidad})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-localidad-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-localidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-localidad-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-localidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-localidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-localidad-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Localidad} \label{sec:cu-create-Localidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear Localidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Localidad (\ref{sec:ui-page-create-localidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Localidad (\ref{sec:ui-page-create-localidad})].
+		\item El Operador captura información en la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Localidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Localidad (\ref{tab:ui-create-localidad-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Localidad} \label{sec:cu-update-Localidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Localidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Localidad (\ref{sec:ui-page-update-localidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Localidad (\ref{sec:cu-search-Localidad})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Localidad (\ref{sec:ui-page-update-localidad})].
+		\item El Operador modifica información en la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Localidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Localidad (\ref{tab:ui-update-localidad-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Localidad} \label{sec:cu-delete-Localidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar Localidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Localidad (\ref{tab:ui-delete-localidad-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Localidad (\ref{sec:cu-search-Localidad})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Localidad (\ref{tab:ui-delete-localidad-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Localidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: TipoCambioFacturacion
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Tipo de Cambio para Facturación} \label{sec:cf-uc-admin-tipocambiofacturacion}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Tipo de Cambio para Facturación} \label{sec:cu-search-TipoCambioFacturacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Tipo de Cambio para Facturación.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Tipo de Cambio para Facturación (\ref{sec:ui-page-search-tipocambiofacturacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Tipo de Cambio para Facturación (\ref{sec:ui-page-search-tipocambiofacturacion})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiofacturacion-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiofacturacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-tipocambiofacturacion-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiofacturacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiofacturacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-tipocambiofacturacion-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Tipo de Cambio para Facturación} \label{sec:cu-create-TipoCambioFacturacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear TipoCambioFacturacion.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Tipo de Cambio para Facturación (\ref{sec:ui-page-create-tipocambiofacturacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Tipo de Cambio para Facturación (\ref{sec:ui-page-create-tipocambiofacturacion})].
+		\item El Operador captura información en la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Tipo de Cambio para Facturación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Tipo de Cambio para Facturación (\ref{tab:ui-create-tipocambiofacturacion-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Tipo de Cambio para Facturación} \label{sec:cu-update-TipoCambioFacturacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Tipo de Cambio para Facturación.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Tipo de Cambio para Facturación (\ref{sec:ui-page-update-tipocambiofacturacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Tipo de Cambio para Facturación (\ref{sec:cu-search-TipoCambioFacturacion})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Tipo de Cambio para Facturación (\ref{sec:ui-page-update-tipocambiofacturacion})].
+		\item El Operador modifica información en la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Tipo de Cambio para Facturación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Tipo de Cambio para Facturación (\ref{tab:ui-update-tipocambiofacturacion-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Tipo de Cambio para Facturación} \label{sec:cu-delete-TipoCambioFacturacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar TipoCambioFacturacion.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Tipo de Cambio para Facturación (\ref{tab:ui-delete-tipocambiofacturacion-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Tipo de Cambio para Facturación (\ref{sec:cu-search-TipoCambioFacturacion})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Tipo de Cambio para Facturación (\ref{tab:ui-delete-tipocambiofacturacion-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Tipo de Cambio para Facturación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: TipoCambioCertificacion
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Tipo de Cambio para Certificación} \label{sec:cf-uc-admin-tipocambiocertificacion}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Tipo de Cambio para Certificación} \label{sec:cu-search-TipoCambioCertificacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Tipo de Cambio para Certificación.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Tipo de Cambio para Certificación (\ref{sec:ui-page-search-tipocambiocertificacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Tipo de Cambio para Certificación (\ref{sec:ui-page-search-tipocambiocertificacion})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiocertificacion-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiocertificacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-tipocambiocertificacion-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiocertificacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-tipocambiocertificacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-tipocambiocertificacion-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Tipo de Cambio para Certificación} \label{sec:cu-create-TipoCambioCertificacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear TipoCambioCertificacion.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Tipo de Cambio para Certificación (\ref{sec:ui-page-create-tipocambiocertificacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Tipo de Cambio para Certificación (\ref{sec:ui-page-create-tipocambiocertificacion})].
+		\item El Operador captura información en la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Tipo de Cambio para Certificación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Tipo de Cambio para Certificación (\ref{tab:ui-create-tipocambiocertificacion-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Tipo de Cambio para Certificación} \label{sec:cu-update-TipoCambioCertificacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Tipo de Cambio para Certificación.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Tipo de Cambio para Certificación (\ref{sec:ui-page-update-tipocambiocertificacion})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Tipo de Cambio para Certificación (\ref{sec:cu-search-TipoCambioCertificacion})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Tipo de Cambio para Certificación (\ref{sec:ui-page-update-tipocambiocertificacion})].
+		\item El Operador modifica información en la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Tipo de Cambio para Certificación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Tipo de Cambio para Certificación (\ref{tab:ui-update-tipocambiocertificacion-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Tipo de Cambio para Certificación} \label{sec:cu-delete-TipoCambioCertificacion}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar TipoCambioCertificacion.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Tipo de Cambio para Certificación (\ref{tab:ui-delete-tipocambiocertificacion-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Tipo de Cambio para Certificación (\ref{sec:cu-search-TipoCambioCertificacion})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Tipo de Cambio para Certificación (\ref{tab:ui-delete-tipocambiocertificacion-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Tipo de Cambio para Certificación].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: PolizaSeguro
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Póliza de Seguro} \label{sec:cf-uc-admin-polizaseguro}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Póliza de Seguro} \label{sec:cu-search-PolizaSeguro}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Póliza de Seguro.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Póliza de Seguro (\ref{sec:ui-page-search-polizaseguro})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Póliza de Seguro (\ref{sec:ui-page-search-polizaseguro})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-polizaseguro-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-polizaseguro-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-polizaseguro-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-polizaseguro-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-polizaseguro-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-polizaseguro-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Póliza de Seguro} \label{sec:cu-create-PolizaSeguro}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear PolizaSeguro.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Póliza de Seguro (\ref{sec:ui-page-create-polizaseguro})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Póliza de Seguro (\ref{sec:ui-page-create-polizaseguro})].
+		\item El Operador captura información en la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Póliza de Seguro].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Póliza de Seguro (\ref{tab:ui-create-polizaseguro-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Póliza de Seguro} \label{sec:cu-update-PolizaSeguro}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Póliza de Seguro.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Póliza de Seguro (\ref{sec:ui-page-update-polizaseguro})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Póliza de Seguro (\ref{sec:cu-search-PolizaSeguro})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Póliza de Seguro (\ref{sec:ui-page-update-polizaseguro})].
+		\item El Operador modifica información en la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Póliza de Seguro].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Póliza de Seguro (\ref{tab:ui-update-polizaseguro-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Póliza de Seguro} \label{sec:cu-delete-PolizaSeguro}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar PolizaSeguro.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Póliza de Seguro (\ref{tab:ui-delete-polizaseguro-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Póliza de Seguro (\ref{sec:cu-search-PolizaSeguro})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Póliza de Seguro (\ref{tab:ui-delete-polizaseguro-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Póliza de Seguro].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+%% --------------------------------------------------------------------------------------------------
+%% CRUD Use Cases: SerieEntidad
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Administrar Serie por Entidad} \label{sec:cf-uc-admin-serieentidad}
+
+%% -----
+%% Use Case: Search
+%% -----
+\subsection{CUXX-01. Buscar Serie por Entidad} \label{sec:cu-search-SerieEntidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Buscar Serie por Entidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Buscar Serie por Entidad (\ref{sec:ui-page-search-serieentidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Buscar Serie por Entidad (\ref{sec:ui-page-search-serieentidad})].
+		\item El Operador captura información en la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-serieentidad-form})].
+		\item El Operador elige el comando [Buscar].
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-serieentidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+			\begin{enumerate}
+				\item Excepción 02: No encontraró información.
+			\end{enumerate}
+		\item El Sistema muestra la lista [Resultados de Búsqueda (\ref{tab:ui-search-results-serieentidad-form})].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01. Datos incompletos} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-serieentidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Criterios de Búsqueda (\ref{tab:ui-search-criteria-serieentidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02. No encontraró información} \\
+	\begin{enumerate}
+		\item El Sistema no obtiene información de acuerdo a los Criterios de Búsqueda seleccionados.
+		\item El Sistema avisa que no encontró información [(\ref{tab:ui-nosearch-serieentidad-page})].
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Create
+%% -----
+\clearpage
+\subsection{CUXX-02. Crear Serie por Entidad} \label{sec:cu-create-SerieEntidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Crear SerieEntidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Crear Serie por Entidad (\ref{sec:ui-page-create-serieentidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema muestra la página [Crear Serie por Entidad (\ref{sec:ui-page-create-serieentidad})].
+		\item El Operador captura información en la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema crea un nuevo registro en la entidad [Serie por Entidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Crear Serie por Entidad (\ref{tab:ui-create-serieentidad-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Update
+%% -----
+\clearpage
+\subsection{CUXX-03. Editar Serie por Entidad} \label{sec:cu-update-SerieEntidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Editar Serie por Entidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Editar Serie por Entidad (\ref{sec:ui-page-update-serieentidad})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Serie por Entidad (\ref{sec:cu-search-SerieEntidad})].
+		\item El Operador selecciona el comando [Editar].
+		\item El Sistema muestra la página [Editar Serie por Entidad (\ref{sec:ui-page-update-serieentidad})].
+		\item El Operador modifica información en la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})].
+		\item El Operador elige el comando [Guardar].
+		\item El Sistema determina que los datos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] estan completos.
+			\begin{enumerate}
+				\item Excepción 01: Datos incompletos.
+			\end{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] son válidos.
+			\begin{enumerate}
+				\item Excepción 02: Datos inválidos.
+			\end{enumerate}
+		\item El Sistema modifica el registro en la entidad [Serie por Entidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 01} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] estan incompletos.
+		\item El Sistema muestra los campos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] que son obligatorios.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Excepción 02} \\
+	\begin{enumerate}
+		\item El Sistema determina que los datos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] son inválidos.
+		\item El Sistema muestra los campos de la forma [Editar Serie por Entidad (\ref{tab:ui-update-serieentidad-form})] que son inválidos e indica la razón.
+		\item Fin de la Excepción.
+	\end{enumerate}
+\end{tabular}
+
+
+%% -----
+%% Use Case: Delete
+%% -----
+\clearpage
+\subsection{CUXX-04. Eliminar Serie por Entidad} \label{sec:cu-delete-SerieEntidad}
+
+\begin{tabular}{ p{3.5cm} p{11.5cm} }
+	\textbf{Actores} & Operador\\
+	\textbf{Objetivo} & Eliminar SerieEntidad.\\
+	\textbf{Evento Disparador} & El Operador solicita la página [Eliminar Serie por Entidad (\ref{tab:ui-delete-serieentidad-page})].\\
+	\textbf{Tipo} & Usuario\\
+	\\
+\end{tabular}
+
+\begin{tabular}{ p{15.5cm} }
+	\textbf{Escenario Principal} \\
+	\begin{enumerate}
+		\item El Sistema invoca al Caso de Uso [CUXX-01. Buscar Serie por Entidad (\ref{sec:cu-search-SerieEntidad})].
+		\item El Operador selecciona el comando [Eliminar].
+		\item El Sistema muestra la página [Eliminar Serie por Entidad (\ref{tab:ui-delete-serieentidad-page})].
+		\item El Operador elige el comando [Eliminar].
+		\item El Sistema elimina el registro de la entidad [Serie por Entidad].
+		\item Fin del Caso de Uso.
+	\end{enumerate}
+\end{tabular}
+

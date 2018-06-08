@@ -1,0 +1,350 @@
+%% --------------------------------------------------------------------------------------------------
+%% Módulo: Banorte.Siab
+%% --------------------------------------------------------------------------------------------------
+\clearpage
+\section{Descripción de las Entidades de Negocio} \label{sec:dom-banorte.siab}
+
+\begin{table}[H]
+	\caption{Entidades del Modelo de Dominio}
+	\label{tab:entities}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l }
+		\hline
+		\textbf{Entidad} & \textbf{Descripción} \\
+		\hline
+		Moneda (\ref{tab:fields-dom-Moneda}) & Catálogo de Monedas \\
+		Entidad Federativa (\ref{tab:fields-dom-EntidadFederativa}) & Entidades Federativas de México INEGI \\
+		Municipio (\ref{tab:fields-dom-Municipio}) & Municipios de México INEGI \\
+		Localidad (\ref{tab:fields-dom-Localidad}) & Localidades de México INEGI \\
+		Tipo de Cambio para Facturación (\ref{tab:fields-dom-TipoCambioFacturacion}) & Tipo de Cambio de una Moneda a una fecha específica para Facturación \\
+		Tipo de Cambio para Certificación (\ref{tab:fields-dom-TipoCambioCertificacion}) & Tipo de Cambio de una Moneda a una fecha específica para Certificación \\
+		Póliza de Seguro (\ref{tab:fields-dom-PolizaSeguro}) & Poliza de Seguros ... \\
+		Serie por Entidad (\ref{tab:fields-dom-SerieEntidad}) & Serie por Entidad ... \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+
+\section{Campos por Entidad de Negocio} \label{sec:entity-fields}
+
+\begin{table}[H]
+	\caption{Entidad de Negocio: Moneda}
+	\label{tab:fields-dom-Moneda}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		MonedaNum &
+		Código &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		Código de la Moneda \\
+		MonedaNombre &
+		Nombre &
+		Text &
+		 &
+		Nombre de la Moneda \\
+		MonedaAbrev &
+		Abreviación &
+		Text &
+		 &
+		Abreviación de la Moneda \\
+		MonedaStatus &
+		Estatus &
+		Entity &
+		 &
+		Estatus del Tipo de Cambio \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Entidad Federativa}
+	\label{tab:fields-dom-EntidadFederativa}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Clave &
+		Clave &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Clave de la Entidad Federativa \\
+		Nombre &
+		Nombre &
+		Text &
+		 &
+		Nombre de la Entidad Federativa \\
+		Abreviatura &
+		Abreviatura &
+		Text &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Min Length: 3
+		\item Max Length: 3
+		\end{itemize}
+		\end{minipage}
+		 &
+		Abreviatura de la Entidad Federativa \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Municipio}
+	\label{tab:fields-dom-Municipio}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Clave &
+		Clave &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Clave del Municipio \\
+		Nombre &
+		Nombre &
+		Text &
+		 &
+		Nombre del Municipio \\
+		Entidad &
+		Entidad Federativa &
+		Entity &
+		 &
+		Entidad Federativa de México INEGI \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Localidad}
+	\label{tab:fields-dom-Localidad}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Clave &
+		Clave &
+		Integer &
+		\begin{minipage}[t]{0.4\textwidth}
+		\begin{itemize}[noitemsep,nolistsep]
+		\setlength{\itemindent}{-.5cm}
+		\item Unique: true
+		\end{itemize}
+		\end{minipage}
+		 &
+		Clave de la Localidad \\
+		Nombre &
+		Nombre &
+		Text &
+		 &
+		Nombre de la Localidad \\
+		Municipio &
+		Municipio &
+		Entity &
+		 &
+		Municipio de México \\
+		ClaveOrigen &
+		Clave Origen &
+		Text &
+		 &
+		Clave Origen \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Tipo de Cambio para Facturación}
+	\label{tab:fields-dom-TipoCambioFacturacion}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Fecha &
+		Fecha &
+		Date &
+		 &
+		Fecha del Tipo de Cambio \\
+		Moneda &
+		Tipo de Cambio &
+		Entity &
+		 &
+		Tipo de cambio de MXN a la Moneda Destino \\
+		Estatus &
+		Estatus &
+		Entity &
+		 &
+		Estatus del Tipo de Cambio \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Tipo de Cambio para Certificación}
+	\label{tab:fields-dom-TipoCambioCertificacion}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Fecha &
+		Fecha &
+		Date &
+		 &
+		Fecha del Tipo de Cambio \\
+		Moneda &
+		Tipo de Cambio &
+		Entity &
+		 &
+		Tipo de cambio de MXN a la Moneda Destino \\
+		Estatus &
+		Estatus &
+		Entity &
+		 &
+		Estatus del Tipo de Cambio \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Póliza de Seguro}
+	\label{tab:fields-dom-PolizaSeguro}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Numero &
+		Número de Póliza &
+		Text &
+		 &
+		Número de la Poliza de Seguro \\
+		Aseguradora &
+		Nombre Aseguradora &
+		Text &
+		 &
+		Nombre de la Aseguradora \\
+		Vigencia &
+		Vigencia &
+		Date &
+		 &
+		Vigencia de la Póliza \\
+		Estatus &
+		Estatus &
+		Entity &
+		 &
+		Estatus de la Póliza \\
+		Cobertura &
+		Cobertura &
+		Entity &
+		 &
+		Cobertura de la Póliza \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+\begin{table}[H]
+	\caption{Entidad de Negocio: Serie por Entidad}
+	\label{tab:fields-dom-SerieEntidad}
+	%\resizebox{\textwidth}{!}{
+	\begin{center}
+	\begin{tabular}{ l l l l l }
+		\hline
+		\textbf{Campo} &
+		\textbf{Etiqueta} &
+		\textbf{Tipo} &
+		\textbf{Restricciones} &
+		\textbf{Descripción} \\
+		\hline
+		Entidad &
+		Entidad &
+		Entity &
+		 &
+		Entidad Federativa \\
+		Serie &
+		Serie &
+		Text &
+		 &
+		Serie de ... \\
+		Estatus &
+		Estatus &
+		Entity &
+		 &
+		Estatus de la Póliza \\
+		\hline
+	\end{tabular}
+	\end{center}
+	%}
+\end{table}
+
+
