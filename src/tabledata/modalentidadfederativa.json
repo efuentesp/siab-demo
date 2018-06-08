@@ -1,0 +1,27 @@
+
+	{"ids":[
+	    {
+	      "id": "entidadfederativa-results",
+	      "headers": [
+		  
+{ "label": "Clave" },
+		  
+{ "label": "Nombre" },
+		  
+{ "label": "Abreviatura" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

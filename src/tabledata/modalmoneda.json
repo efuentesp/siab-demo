@@ -1,0 +1,23 @@
+
+	{"ids":[
+	    {
+	      "id": "moneda-results",
+	      "headers": [
+		  
+{ "label": "Código" },
+		  
+{ "label": "Nombre" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

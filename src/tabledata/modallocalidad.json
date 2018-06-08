@@ -1,0 +1,19 @@
+
+	{"ids":[
+	    {
+	      "id": "localidad-results",
+	      "headers": [
+		  
+{ "label": "Municipio" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}
