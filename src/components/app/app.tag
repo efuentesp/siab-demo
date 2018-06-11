@@ -3,68 +3,36 @@
 		<sidebar-profile
 			picture="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
 			name="Juan Pérez González" role="Afiliado"/>
-		<sidebar-menu>
-			<menu-section title="Moneda Administración">
-			<side-menu icon="fa fa-group" label="moneda">
+
+			<sidebar-menu>
+			<menu-section title="SIAB">
+			<side-menu icon="fa fa-group" label="Moneda">
 				<menu-item to="/moneda-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="EntidadFederativa Administración">
-			<side-menu icon="fa fa-group" label="entidadFederativa">
+			<side-menu icon="fa fa-group" label="EntidadFederativa">
 				<menu-item to="/entidadfederativa-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="Municipio Administración">
-			<side-menu icon="fa fa-group" label="municipio">
+			<side-menu icon="fa fa-group" label="Municipio">
 				<menu-item to="/municipio-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="Localidad Administración">
-			<side-menu icon="fa fa-group" label="localidad">
+			<side-menu icon="fa fa-group" label="Localidad">
 				<menu-item to="/localidad-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="TipoCambioFacturacion Administración">
-			<side-menu icon="fa fa-group" label="tipoCambioFacturacion">
+			<side-menu icon="fa fa-group" label="TipoCambioFacturacion">
 				<menu-item to="/tipocambiofacturacion-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="TipoCambioCertificacion Administración">
-			<side-menu icon="fa fa-group" label="tipoCambioCertificacion">
+			<side-menu icon="fa fa-group" label="TipoCambioCertificacion">
 				<menu-item to="/tipocambiocertificacion-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="PolizaSeguro Administración">
-			<side-menu icon="fa fa-group" label="polizaSeguro">
+			<side-menu icon="fa fa-group" label="PolizaSeguro">
 				<menu-item to="/polizaseguro-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="SerieEntidad Administración">
-			<side-menu icon="fa fa-group" label="serieEntidad">
+			<side-menu icon="fa fa-group" label="SerieEntidad">
 				<menu-item to="/serieentidad-admin/" label="Administración"/>
 			</side-menu>
-		</menu-section>
-		<menu-section title="TasasCatalogo Administración">
-			<side-menu icon="fa fa-group" label="tasasCatalogo">
-				<menu-item to="/tasascatalogo-admin/" label="Administración"/>
-			</side-menu>
-		</menu-section>
-		<menu-section title="CatalogoTasasReferencia Administración">
-			<side-menu icon="fa fa-group" label="catalogoTasasReferencia">
-				<menu-item to="/catalogotasasreferencia-admin/" label="Administración"/>
-			</side-menu>
-		</menu-section>
-		<menu-section title="CatalogoTenedores Administración">
-			<side-menu icon="fa fa-group" label="catalogoTenedores">
-				<menu-item to="/catalogotenedores-admin/" label="Administración"/>
-			</side-menu>
-		</menu-section>
-		<menu-section title="CatalogoTenedoresCertificado Administración">
-			<side-menu icon="fa fa-group" label="catalogoTenedoresCertificado">
-				<menu-item to="/catalogotenedorescertificado-admin/" label="Administración"/>
-			</side-menu>
-		</menu-section>
-		</sidebar-menu>
+			</menu-section>
+			</sidebar-menu>
+
 	</sidebar>
   <topbar></topbar>
 </app>
