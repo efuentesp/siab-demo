@@ -1,23 +1,19 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "nivel_identificador-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Clave" },
 		  
-{ "label": "Nombre" },
-		  
-{ "label": "Estatus" }
+{ "label": "Descripción" }
 	      ],
 	      "rows": [
 	      	{ "id": "XXX", "data": [
 "XXX",
-"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
-"XXX",
 "XXX",
 "XXX"
 	      	] }

@@ -1,12 +1,14 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "tasa_rucam-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Clave" },
 		  
-{ "label": "Nombre" },
+{ "label": "Tasa" },
+		  
+{ "label": "Descripción" },
 		  
 { "label": "Estatus" }
 	      ],
@@ -14,9 +16,11 @@
 	      	{ "id": "XXX", "data": [
 "XXX",
 "XXX",
+"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
+"XXX",
 "XXX",
 "XXX",
 "XXX"

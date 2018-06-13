@@ -1,12 +1,14 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "identificador-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Clave" },
 		  
-{ "label": "Nombre" },
+{ "label": "Descripción" },
+		  
+{ "label": "Descripción" },
 		  
 { "label": "Estatus" }
 	      ],
@@ -14,9 +16,11 @@
 	      	{ "id": "XXX", "data": [
 "XXX",
 "XXX",
+"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
+"XXX",
 "XXX",
 "XXX",
 "XXX"

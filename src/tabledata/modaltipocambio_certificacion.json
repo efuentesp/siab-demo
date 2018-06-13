@@ -1,22 +1,26 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "tipocambio_certificacion-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Fecha" },
 		  
-{ "label": "Nombre" },
+{ "label": "Tipo Cambio" },
 		  
-{ "label": "Estatus" }
+{ "label": "Moneda" },
+		  
+{ "label": "Status" }
 	      ],
 	      "rows": [
 	      	{ "id": "XXX", "data": [
 "XXX",
 "XXX",
+"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
+"XXX",
 "XXX",
 "XXX",
 "XXX"

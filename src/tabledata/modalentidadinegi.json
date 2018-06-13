@@ -1,0 +1,55 @@
+
+	{"ids":[
+	    {
+	      "id": "entidadinegi-results",
+	      "headers": [
+		  
+{ "label": "Clave Entidad" },
+		  
+{ "label": "Nombre" },
+		  
+{ "label": "Abreviatura" },
+		  
+{ "label": "Clave Municipio" },
+		  
+{ "label": "Clave Municipio" },
+		  
+{ "label": "Nombre Municipio" },
+		  
+{ "label": "Clave Localidad" },
+		  
+{ "label": "Nombre Localidad" },
+		  
+{ "label": "Clave Origen" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

@@ -9,26 +9,50 @@
 			<side-menu icon="fa fa-group" label="Moneda">
 				<menu-item to="/moneda-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="EntidadFederativa">
-				<menu-item to="/entidadfederativa-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="EntidadInegi">
+				<menu-item to="/entidadinegi-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="Municipio">
-				<menu-item to="/municipio-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="TipoCambio_Facturacion">
+				<menu-item to="/tipocambio_facturacion-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="Localidad">
-				<menu-item to="/localidad-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="TipoCambio_Certificacion">
+				<menu-item to="/tipocambio_certificacion-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="TipoCambioFacturacion">
-				<menu-item to="/tipocambiofacturacion-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="Poliza_Seguro">
+				<menu-item to="/poliza_seguro-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="TipoCambioCertificacion">
-				<menu-item to="/tipocambiocertificacion-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="Entidad_Serie">
+				<menu-item to="/entidad_serie-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="PolizaSeguro">
-				<menu-item to="/polizaseguro-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="Tasa_Rucam">
+				<menu-item to="/tasa_rucam-admin/" label="Administración"/>
 			</side-menu>
-			<side-menu icon="fa fa-group" label="SerieEntidad">
-				<menu-item to="/serieentidad-admin/" label="Administración"/>
+			<side-menu icon="fa fa-group" label="Banco">
+				<menu-item to="/banco-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Nivel_Identificador">
+				<menu-item to="/nivel_identificador-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Identificador">
+				<menu-item to="/identificador-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Secretaria">
+				<menu-item to="/secretaria-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Regulacion">
+				<menu-item to="/regulacion-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="UnidadMedida">
+				<menu-item to="/unidadmedida-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Tipo_Registro_SAAIM3">
+				<menu-item to="/tipo_registro_saaim3-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="TipoError_SAAIM3">
+				<menu-item to="/tipoerror_saaim3-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Error_SAAIM3">
+				<menu-item to="/error_saaim3-admin/" label="Administración"/>
 			</side-menu>
 			</menu-section>
 			</sidebar-menu>

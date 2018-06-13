@@ -1,12 +1,12 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "entidad_serie-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Entidad" },
 		  
-{ "label": "Nombre" },
+{ "label": "Serie" },
 		  
 { "label": "Estatus" }
 	      ],

@@ -70,61 +70,81 @@ import './components/app/moneda/moneda-form.tag'
 import './components/app/moneda/moneda-add.tag'
 import './components/app/moneda/moneda-edit.tag'
 import './components/app/moneda/moneda-delete.tag'
-import './components/app/entidadfederativa/entidadfederativa-admin.tag'
-import './components/app/entidadfederativa/entidadfederativa-form.tag'
-import './components/app/entidadfederativa/entidadfederativa-add.tag'
-import './components/app/entidadfederativa/entidadfederativa-edit.tag'
-import './components/app/entidadfederativa/entidadfederativa-delete.tag'
-import './components/app/municipio/municipio-admin.tag'
-import './components/app/municipio/municipio-form.tag'
-import './components/app/municipio/municipio-add.tag'
-import './components/app/municipio/municipio-edit.tag'
-import './components/app/municipio/municipio-delete.tag'
-import './components/app/localidad/localidad-admin.tag'
-import './components/app/localidad/localidad-form.tag'
-import './components/app/localidad/localidad-add.tag'
-import './components/app/localidad/localidad-edit.tag'
-import './components/app/localidad/localidad-delete.tag'
-import './components/app/tipocambiofacturacion/tipocambiofacturacion-admin.tag'
-import './components/app/tipocambiofacturacion/tipocambiofacturacion-form.tag'
-import './components/app/tipocambiofacturacion/tipocambiofacturacion-add.tag'
-import './components/app/tipocambiofacturacion/tipocambiofacturacion-edit.tag'
-import './components/app/tipocambiofacturacion/tipocambiofacturacion-delete.tag'
-import './components/app/tipocambiocertificacion/tipocambiocertificacion-admin.tag'
-import './components/app/tipocambiocertificacion/tipocambiocertificacion-form.tag'
-import './components/app/tipocambiocertificacion/tipocambiocertificacion-add.tag'
-import './components/app/tipocambiocertificacion/tipocambiocertificacion-edit.tag'
-import './components/app/tipocambiocertificacion/tipocambiocertificacion-delete.tag'
-import './components/app/polizaseguro/polizaseguro-admin.tag'
-import './components/app/polizaseguro/polizaseguro-form.tag'
-import './components/app/polizaseguro/polizaseguro-add.tag'
-import './components/app/polizaseguro/polizaseguro-edit.tag'
-import './components/app/polizaseguro/polizaseguro-delete.tag'
-import './components/app/serieentidad/serieentidad-admin.tag'
-import './components/app/serieentidad/serieentidad-form.tag'
-import './components/app/serieentidad/serieentidad-add.tag'
-import './components/app/serieentidad/serieentidad-edit.tag'
-import './components/app/serieentidad/serieentidad-delete.tag'
-import './components/app/tasascatalogo/tasascatalogo-admin.tag'
-import './components/app/tasascatalogo/tasascatalogo-form.tag'
-import './components/app/tasascatalogo/tasascatalogo-add.tag'
-import './components/app/tasascatalogo/tasascatalogo-edit.tag'
-import './components/app/tasascatalogo/tasascatalogo-delete.tag'
-import './components/app/catalogotasasreferencia/catalogotasasreferencia-admin.tag'
-import './components/app/catalogotasasreferencia/catalogotasasreferencia-form.tag'
-import './components/app/catalogotasasreferencia/catalogotasasreferencia-add.tag'
-import './components/app/catalogotasasreferencia/catalogotasasreferencia-edit.tag'
-import './components/app/catalogotasasreferencia/catalogotasasreferencia-delete.tag'
-import './components/app/catalogotenedores/catalogotenedores-admin.tag'
-import './components/app/catalogotenedores/catalogotenedores-form.tag'
-import './components/app/catalogotenedores/catalogotenedores-add.tag'
-import './components/app/catalogotenedores/catalogotenedores-edit.tag'
-import './components/app/catalogotenedores/catalogotenedores-delete.tag'
-import './components/app/catalogotenedorescertificado/catalogoTenedoresCertificado-admin.tag'
-import './components/app/catalogotenedorescertificado/catalogoTenedoresCertificado-form.tag'
-import './components/app/catalogotenedorescertificado/catalogoTenedoresCertificado-add.tag'
-import './components/app/catalogotenedorescertificado/catalogoTenedoresCertificado-edit.tag'
-import './components/app/catalogotenedorescertificado/catalogoTenedoresCertificado-delete.tag'
+import './components/app/entidadinegi/entidadinegi-admin.tag'
+import './components/app/entidadinegi/entidadinegi-form.tag'
+import './components/app/entidadinegi/entidadinegi-add.tag'
+import './components/app/entidadinegi/entidadinegi-edit.tag'
+import './components/app/entidadinegi/entidadinegi-delete.tag'
+import './components/app/tipocambio_facturacion/tipocambio_facturacion-admin.tag'
+import './components/app/tipocambio_facturacion/tipocambio_facturacion-form.tag'
+import './components/app/tipocambio_facturacion/tipocambio_facturacion-add.tag'
+import './components/app/tipocambio_facturacion/tipocambio_facturacion-edit.tag'
+import './components/app/tipocambio_facturacion/tipocambio_facturacion-delete.tag'
+import './components/app/tipocambio_certificacion/tipocambio_certificacion-admin.tag'
+import './components/app/tipocambio_certificacion/tipocambio_certificacion-form.tag'
+import './components/app/tipocambio_certificacion/tipocambio_certificacion-add.tag'
+import './components/app/tipocambio_certificacion/tipocambio_certificacion-edit.tag'
+import './components/app/tipocambio_certificacion/tipocambio_certificacion-delete.tag'
+import './components/app/poliza_seguro/poliza_seguro-admin.tag'
+import './components/app/poliza_seguro/poliza_seguro-form.tag'
+import './components/app/poliza_seguro/poliza_seguro-add.tag'
+import './components/app/poliza_seguro/poliza_seguro-edit.tag'
+import './components/app/poliza_seguro/poliza_seguro-delete.tag'
+import './components/app/entidad_serie/entidad_serie-admin.tag'
+import './components/app/entidad_serie/entidad_serie-form.tag'
+import './components/app/entidad_serie/entidad_serie-add.tag'
+import './components/app/entidad_serie/entidad_serie-edit.tag'
+import './components/app/entidad_serie/entidad_serie-delete.tag'
+import './components/app/tasa_rucam/tasa_rucam-admin.tag'
+import './components/app/tasa_rucam/tasa_rucam-form.tag'
+import './components/app/tasa_rucam/tasa_rucam-add.tag'
+import './components/app/tasa_rucam/tasa_rucam-edit.tag'
+import './components/app/tasa_rucam/tasa_rucam-delete.tag'
+import './components/app/banco/banco-admin.tag'
+import './components/app/banco/banco-form.tag'
+import './components/app/banco/banco-add.tag'
+import './components/app/banco/banco-edit.tag'
+import './components/app/banco/banco-delete.tag'
+import './components/app/nivel_identificador/nivel_identificador-admin.tag'
+import './components/app/nivel_identificador/nivel_identificador-form.tag'
+import './components/app/nivel_identificador/nivel_identificador-add.tag'
+import './components/app/nivel_identificador/nivel_identificador-edit.tag'
+import './components/app/nivel_identificador/nivel_identificador-delete.tag'
+import './components/app/identificador/identificador-admin.tag'
+import './components/app/identificador/identificador-form.tag'
+import './components/app/identificador/identificador-add.tag'
+import './components/app/identificador/identificador-edit.tag'
+import './components/app/identificador/identificador-delete.tag'
+import './components/app/secretaria/secretaria-admin.tag'
+import './components/app/secretaria/secretaria-form.tag'
+import './components/app/secretaria/secretaria-add.tag'
+import './components/app/secretaria/secretaria-edit.tag'
+import './components/app/secretaria/secretaria-delete.tag'
+import './components/app/regulacion/regulacion-admin.tag'
+import './components/app/regulacion/regulacion-form.tag'
+import './components/app/regulacion/regulacion-add.tag'
+import './components/app/regulacion/regulacion-edit.tag'
+import './components/app/regulacion/regulacion-delete.tag'
+import './components/app/unidadmedida/unidadmedida-admin.tag'
+import './components/app/unidadmedida/unidadmedida-form.tag'
+import './components/app/unidadmedida/unidadmedida-add.tag'
+import './components/app/unidadmedida/unidadmedida-edit.tag'
+import './components/app/unidadmedida/unidadmedida-delete.tag'
+import './components/app/tipo_registro_saaim3/tipo_registro_saaim3-admin.tag'
+import './components/app/tipo_registro_saaim3/tipo_registro_saaim3-form.tag'
+import './components/app/tipo_registro_saaim3/tipo_registro_saaim3-add.tag'
+import './components/app/tipo_registro_saaim3/tipo_registro_saaim3-edit.tag'
+import './components/app/tipo_registro_saaim3/tipo_registro_saaim3-delete.tag'
+import './components/app/tipoerror_saaim3/tipoerror_saaim3-admin.tag'
+import './components/app/tipoerror_saaim3/tipoerror_saaim3-form.tag'
+import './components/app/tipoerror_saaim3/tipoerror_saaim3-add.tag'
+import './components/app/tipoerror_saaim3/tipoerror_saaim3-edit.tag'
+import './components/app/tipoerror_saaim3/tipoerror_saaim3-delete.tag'
+import './components/app/error_saaim3/error_saaim3-admin.tag'
+import './components/app/error_saaim3/error_saaim3-form.tag'
+import './components/app/error_saaim3/error_saaim3-add.tag'
+import './components/app/error_saaim3/error_saaim3-edit.tag'
+import './components/app/error_saaim3/error_saaim3-delete.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -160,52 +180,68 @@ var routes = [
   { route: '/login/', tag: 'login' },
   { route: '/home/', tag: 'app' },
   { route: '/moneda-admin/', tag: 'moneda-admin' },
-  { route: '/entidadfederativa-admin/', tag: 'entidadfederativa-admin' },
-  { route: '/municipio-admin/', tag: 'municipio-admin' },
-  { route: '/localidad-admin/', tag: 'localidad-admin' },
-  { route: '/tipocambiofacturacion-admin/', tag: 'tipocambiofacturacion-admin' },
-  { route: '/tipocambiocertificacion-admin/', tag: 'tipocambiocertificacion-admin' },
-  { route: '/polizaseguro-admin/', tag: 'polizaseguro-admin' },
-  { route: '/serieentidad-admin/', tag: 'serieentidad-admin' },
-  { route: '/tasascatalogo-admin/', tag: 'tasascatalogo-admin' },
-  { route: '/catalogotasasreferencia-admin/', tag: 'catalogotasasreferencia-admin' },
-  { route: '/catalogotenedores-admin/', tag: 'catalogotenedores-admin' },
-  { route: '/catalogotenedorescertificado-admin/', tag: 'catalogotenedorescertificado-admin' },
+  { route: '/entidadinegi-admin/', tag: 'entidadinegi-admin' },
+  { route: '/tipocambio_facturacion-admin/', tag: 'tipocambio_facturacion-admin' },
+  { route: '/tipocambio_certificacion-admin/', tag: 'tipocambio_certificacion-admin' },
+  { route: '/poliza_seguro-admin/', tag: 'poliza_seguro-admin' },
+  { route: '/entidad_serie-admin/', tag: 'entidad_serie-admin' },
+  { route: '/tasa_rucam-admin/', tag: 'tasa_rucam-admin' },
+  { route: '/banco-admin/', tag: 'banco-admin' },
+  { route: '/nivel_identificador-admin/', tag: 'nivel_identificador-admin' },
+  { route: '/identificador-admin/', tag: 'identificador-admin' },
+  { route: '/secretaria-admin/', tag: 'secretaria-admin' },
+  { route: '/regulacion-admin/', tag: 'regulacion-admin' },
+  { route: '/unidadmedida-admin/', tag: 'unidadmedida-admin' },
+  { route: '/tipo_registro_saaim3-admin/', tag: 'tipo_registro_saaim3-admin' },
+  { route: '/tipoerror_saaim3-admin/', tag: 'tipoerror_saaim3-admin' },
+  { route: '/error_saaim3-admin/', tag: 'error_saaim3-admin' },
   { route: '/moneda-add/', tag: 'moneda-add' },
-  { route: '/entidadfederativa-add/', tag: 'entidadfederativa-add' },
-  { route: '/municipio-add/', tag: 'municipio-add' },
-  { route: '/localidad-add/', tag: 'localidad-add' },
-  { route: '/tipocambiofacturacion-add/', tag: 'tipocambiofacturacion-add' },
-  { route: '/tipocambiocertificacion-add/', tag: 'tipocambiocertificacion-add' },
-  { route: '/polizaseguro-add/', tag: 'polizaseguro-add' },
-  { route: '/serieentidad-add/', tag: 'serieentidad-add' },
-  { route: '/tasascatalogo-add/', tag: 'tasascatalogo-add' },
-  { route: '/catalogotasasreferencia-add/', tag: 'catalogotasasreferencia-add' },
-  { route: '/catalogotenedores-add/', tag: 'catalogotenedores-add' },
-  { route: '/catalogotenedorescertificado-add/', tag: 'catalogotenedorescertificado-add' },
+  { route: '/entidadinegi-add/', tag: 'entidadinegi-add' },
+  { route: '/tipocambio_facturacion-add/', tag: 'tipocambio_facturacion-add' },
+  { route: '/tipocambio_certificacion-add/', tag: 'tipocambio_certificacion-add' },
+  { route: '/poliza_seguro-add/', tag: 'poliza_seguro-add' },
+  { route: '/entidad_serie-add/', tag: 'entidad_serie-add' },
+  { route: '/tasa_rucam-add/', tag: 'tasa_rucam-add' },
+  { route: '/banco-add/', tag: 'banco-add' },
+  { route: '/nivel_identificador-add/', tag: 'nivel_identificador-add' },
+  { route: '/identificador-add/', tag: 'identificador-add' },
+  { route: '/secretaria-add/', tag: 'secretaria-add' },
+  { route: '/regulacion-add/', tag: 'regulacion-add' },
+  { route: '/unidadmedida-add/', tag: 'unidadmedida-add' },
+  { route: '/tipo_registro_saaim3-add/', tag: 'tipo_registro_saaim3-add' },
+  { route: '/tipoerror_saaim3-add/', tag: 'tipoerror_saaim3-add' },
+  { route: '/error_saaim3-add/', tag: 'error_saaim3-add' },
   { route: '/moneda-edit/', tag: 'moneda-edit' },
-  { route: '/entidadfederativa-edit/', tag: 'entidadfederativa-edit' },
-  { route: '/municipio-edit/', tag: 'municipio-edit' },
-  { route: '/localidad-edit/', tag: 'localidad-edit' },
-  { route: '/tipocambiofacturacion-edit/', tag: 'tipocambiofacturacion-edit' },
-  { route: '/tipocambiocertificacion-edit/', tag: 'tipocambiocertificacion-edit' },
-  { route: '/polizaseguro-edit/', tag: 'polizaseguro-edit' },
-  { route: '/serieentidad-edit/', tag: 'serieentidad-edit' },
-  { route: '/tasascatalogo-edit/', tag: 'tasascatalogo-edit' },
-  { route: '/catalogotasasreferencia-edit/', tag: 'catalogotasasreferencia-edit' },
-  { route: '/catalogotenedores-edit/', tag: 'catalogotenedores-edit' },
-  { route: '/catalogotenedorescertificado-edit/', tag: 'catalogotenedorescertificado-edit' },
+  { route: '/entidadinegi-edit/', tag: 'entidadinegi-edit' },
+  { route: '/tipocambio_facturacion-edit/', tag: 'tipocambio_facturacion-edit' },
+  { route: '/tipocambio_certificacion-edit/', tag: 'tipocambio_certificacion-edit' },
+  { route: '/poliza_seguro-edit/', tag: 'poliza_seguro-edit' },
+  { route: '/entidad_serie-edit/', tag: 'entidad_serie-edit' },
+  { route: '/tasa_rucam-edit/', tag: 'tasa_rucam-edit' },
+  { route: '/banco-edit/', tag: 'banco-edit' },
+  { route: '/nivel_identificador-edit/', tag: 'nivel_identificador-edit' },
+  { route: '/identificador-edit/', tag: 'identificador-edit' },
+  { route: '/secretaria-edit/', tag: 'secretaria-edit' },
+  { route: '/regulacion-edit/', tag: 'regulacion-edit' },
+  { route: '/unidadmedida-edit/', tag: 'unidadmedida-edit' },
+  { route: '/tipo_registro_saaim3-edit/', tag: 'tipo_registro_saaim3-edit' },
+  { route: '/tipoerror_saaim3-edit/', tag: 'tipoerror_saaim3-edit' },
+  { route: '/error_saaim3-edit/', tag: 'error_saaim3-edit' },
   { route: '/moneda-delete/', tag: 'moneda-delete' },
-  { route: '/entidadFederativa-delete/', tag: 'entidadFederativa-delete' },
-  { route: '/municipio-delete/', tag: 'municipio-delete' },
-  { route: '/localidad-delete/', tag: 'localidad-delete' },
-  { route: '/tipocambiofacturacion-delete/', tag: 'tipocambiofacturacion-delete' },
-  { route: '/tipocambiocertificacion-delete/', tag: 'tipocambiocertificacion-delete' },
-  { route: '/polizaseguro-delete/', tag: 'polizaseguro-delete' },
-  { route: '/serieentidad-delete/', tag: 'serieentidad-delete' },
-  { route: '/tasascatalogo-delete/', tag: 'tasascatalogo-delete' },
-  { route: '/catalogotasasreferencia-delete/', tag: 'catalogotasasreferencia-delete' },
-  { route: '/catalogotenedores-delete/', tag: 'catalogotenedores-delete' },
-  { route: '/catalogotenedorescertificado-delete/', tag: 'catalogotenedorescertificado-delete' }
+  { route: '/entidadinegi-delete/', tag: 'entidadinegi-delete' },
+  { route: '/tipocambio_facturacion-delete/', tag: 'tipocambio_facturacion-delete' },
+  { route: '/tipocambio_certificacion-delete/', tag: 'tipocambio_certificacion-delete' },
+  { route: '/poliza_seguro-delete/', tag: 'poliza_seguro-delete' },
+  { route: '/entidad_serie-delete/', tag: 'entidad_serie-delete' },
+  { route: '/tasa_rucam-delete/', tag: 'tasa_rucam-delete' },
+  { route: '/banco-delete/', tag: 'banco-delete' },
+  { route: '/nivel_identificador-delete/', tag: 'nivel_identificador-delete' },
+  { route: '/identificador-delete/', tag: 'identificador-delete' },
+  { route: '/secretaria-delete/', tag: 'secretaria-delete' },
+  { route: '/regulacion-delete/', tag: 'regulacion-delete' },
+  { route: '/unidadmedida-delete/', tag: 'unidadmedida-delete' },
+  { route: '/tipo_registro_saaim3-delete/', tag: 'tipo_registro_saaim3-delete' },
+  { route: '/tipoerror_saaim3-delete/', tag: 'tipoerror_saaim3-delete' },
+  { route: '/error_saaim3-delete/', tag: 'error_saaim3-delete' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

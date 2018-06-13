@@ -1,12 +1,14 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "poliza_seguro-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Número de Póliza" },
 		  
-{ "label": "Nombre" },
+{ "label": "Nombre Aseguradora" },
+		  
+{ "label": "Vigencia" },
 		  
 { "label": "Estatus" }
 	      ],
@@ -14,9 +16,11 @@
 	      	{ "id": "XXX", "data": [
 "XXX",
 "XXX",
+"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
+"XXX",
 "XXX",
 "XXX",
 "XXX"

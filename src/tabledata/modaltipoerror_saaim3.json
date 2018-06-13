@@ -1,12 +1,12 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "tipoerror_saaim3-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Error" },
 		  
-{ "label": "Nombre" },
+{ "label": "Descripción" },
 		  
 { "label": "Estatus" }
 	      ],

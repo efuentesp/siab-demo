@@ -1,14 +1,14 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "banco-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Clave del Tenedor" },
 		  
-{ "label": "Nombre" },
+{ "label": "Nombre del Tenedor" },
 		  
-{ "label": "Estatus" }
+{ "label": "RFC del Tenedor" }
 	      ],
 	      "rows": [
 	      	{ "id": "XXX", "data": [

@@ -1,12 +1,18 @@
 
 	{"ids":[
 	    {
-	      "id": "moneda-results",
+	      "id": "error_saaim3-results",
 	      "headers": [
 		  
-{ "label": "Código" },
+{ "label": "Tipo Registro" },
 		  
-{ "label": "Nombre" },
+{ "label": "Tipo Error" },
+		  
+{ "label": "Número Campo Error" },
+		  
+{ "label": "Consecutivo Error" },
+		  
+{ "label": "Descripción Error" },
 		  
 { "label": "Estatus" }
 	      ],
@@ -14,9 +20,15 @@
 	      	{ "id": "XXX", "data": [
 "XXX",
 "XXX",
+"XXX",
+"XXX",
+"XXX",
 "XXX"
 	      	] },
 	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
 "XXX",
 "XXX",
 "XXX"

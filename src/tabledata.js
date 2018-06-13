@@ -1,16 +1,1 @@
-module.exports = {
-  files: [
-    { path: require('json-loader!./tabledata/modalmoneda.json') },
-    { path: require('json-loader!./tabledata/modalentidadfederativa.json') },
-    { path: require('json-loader!./tabledata/modalmunicipio.json') },
-    { path: require('json-loader!./tabledata/modallocalidad.json') },
-    { path: require('json-loader!./tabledata/modaltipocambiofacturacion.json') },
-    { path: require('json-loader!./tabledata/modaltipocambiocertificacion.json') },
-    { path: require('json-loader!./tabledata/modalpolizaseguro.json') },
-    { path: require('json-loader!./tabledata/modalserieentidad.json') },
-    { path: require('json-loader!./tabledata/modaltasascatalogo.json') },
-    { path: require('json-loader!./tabledata/modalcatalogotasasreferencia.json') },
-    { path: require('json-loader!./tabledata/modalcatalogotenedores.json') },
-    { path: require('json-loader!./tabledata/modalcatalogotenedorescertificado.json') }
-  ]
-}
+module.exports = {files: [{ path: require('json-loader!./tabledata/modalmoneda.json') }, { path: require('json-loader!./tabledata/modalentidadinegi.json') }, { path: require('json-loader!./tabledata/modaltipocambio_facturacion.json') }, { path: require('json-loader!./tabledata/modaltipocambio_certificacion.json') }, { path: require('json-loader!./tabledata/modalpoliza_seguro.json') }, { path: require('json-loader!./tabledata/modalentidad_serie.json') }, { path: require('json-loader!./tabledata/modaltasa_rucam.json') }, { path: require('json-loader!./tabledata/modalbanco.json') }, { path: require('json-loader!./tabledata/modalnivel_identificador.json') }, { path: require('json-loader!./tabledata/modalidentificador.json') }, { path: require('json-loader!./tabledata/modalsecretaria.json') }, { path: require('json-loader!./tabledata/modalregulacion.json') }, { path: require('json-loader!./tabledata/modalunidadmedida.json') }, { path: require('json-loader!./tabledata/modaltipo_registro_saaim3.json') }, { path: require('json-loader!./tabledata/modaltipoerror_saaim3.json') }, { path: require('json-loader!./tabledata/modalerror_saaim3.json') }]}
