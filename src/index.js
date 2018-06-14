@@ -145,6 +145,46 @@ import './components/app/error_saaim3/error_saaim3-form.tag'
 import './components/app/error_saaim3/error_saaim3-add.tag'
 import './components/app/error_saaim3/error_saaim3-edit.tag'
 import './components/app/error_saaim3/error_saaim3-delete.tag'
+import './components/app/error_pagoe/error_pagoe-admin.tag'
+import './components/app/error_pagoe/error_pagoe-form.tag'
+import './components/app/error_pagoe/error_pagoe-add.tag'
+import './components/app/error_pagoe/error_pagoe-edit.tag'
+import './components/app/error_pagoe/error_pagoe-delete.tag'
+import './components/app/acting_catalogo/acting_catalogo-admin.tag'
+import './components/app/acting_catalogo/acting_catalogo-form.tag'
+import './components/app/acting_catalogo/acting_catalogo-add.tag'
+import './components/app/acting_catalogo/acting_catalogo-edit.tag'
+import './components/app/acting_catalogo/acting_catalogo-delete.tag'
+import './components/app/catalogoeventosac/catalogoeventosac-admin.tag'
+import './components/app/catalogoeventosac/catalogoeventosac-form.tag'
+import './components/app/catalogoeventosac/catalogoeventosac-add.tag'
+import './components/app/catalogoeventosac/catalogoeventosac-edit.tag'
+import './components/app/catalogoeventosac/catalogoeventosac-delete.tag'
+import './components/app/tipo_registro_cc_saaim3/tipo_registro_cc_saaim3-admin.tag'
+import './components/app/tipo_registro_cc_saaim3/tipo_registro_cc_saaim3-form.tag'
+import './components/app/tipo_registro_cc_saaim3/tipo_registro_cc_saaim3-add.tag'
+import './components/app/tipo_registro_cc_saaim3/tipo_registro_cc_saaim3-edit.tag'
+import './components/app/tipo_registro_cc_saaim3/tipo_registro_cc_saaim3-delete.tag'
+import './components/app/error_cc_saaim3/error_cc_saaim3-admin.tag'
+import './components/app/error_cc_saaim3/error_cc_saaim3-form.tag'
+import './components/app/error_cc_saaim3/error_cc_saaim3-add.tag'
+import './components/app/error_cc_saaim3/error_cc_saaim3-edit.tag'
+import './components/app/error_cc_saaim3/error_cc_saaim3-delete.tag'
+import './components/app/tiporeg_solcc/tiporeg_solcc-admin.tag'
+import './components/app/tiporeg_solcc/tiporeg_solcc-form.tag'
+import './components/app/tiporeg_solcc/tiporeg_solcc-add.tag'
+import './components/app/tiporeg_solcc/tiporeg_solcc-edit.tag'
+import './components/app/tiporeg_solcc/tiporeg_solcc-delete.tag'
+import './components/app/tipoerror_cc_saaim3/tipoerror_cc_saaim3-admin.tag'
+import './components/app/tipoerror_cc_saaim3/tipoerror_cc_saaim3-form.tag'
+import './components/app/tipoerror_cc_saaim3/tipoerror_cc_saaim3-add.tag'
+import './components/app/tipoerror_cc_saaim3/tipoerror_cc_saaim3-edit.tag'
+import './components/app/tipoerror_cc_saaim3/tipoerror_cc_saaim3-delete.tag'
+import './components/app/error_solcc/error_solcc-admin.tag'
+import './components/app/error_solcc/error_solcc-form.tag'
+import './components/app/error_solcc/error_solcc-add.tag'
+import './components/app/error_solcc/error_solcc-edit.tag'
+import './components/app/error_solcc/error_solcc-delete.tag'
 
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
@@ -176,8 +216,7 @@ for (var j = 0; j < json.files.length; j++) {
 }
 require('riot-routehandler')
 var routes = [
-  { route: '/', tag: 'login' },
-  { route: '/login/', tag: 'login' },
+   { route: '/login/', tag: 'login' },
   { route: '/home/', tag: 'app' },
   { route: '/moneda-admin/', tag: 'moneda-admin' },
   { route: '/entidadinegi-admin/', tag: 'entidadinegi-admin' },
@@ -195,6 +234,14 @@ var routes = [
   { route: '/tipo_registro_saaim3-admin/', tag: 'tipo_registro_saaim3-admin' },
   { route: '/tipoerror_saaim3-admin/', tag: 'tipoerror_saaim3-admin' },
   { route: '/error_saaim3-admin/', tag: 'error_saaim3-admin' },
+  { route: '/error_pagoe-admin/', tag: 'error_pagoe-admin' },
+  { route: '/acting_catalogo-admin/', tag: 'acting_catalogo-admin' },
+  { route: '/catalogoeventosac-admin/', tag: 'catalogoeventosac-admin' },
+  { route: '/tipo_registro_cc_saaim3-admin/', tag: 'tipo_registro_cc_saaim3-admin' },
+  { route: '/error_cc_saaim3-admin/', tag: 'error_cc_saaim3-admin' },
+  { route: '/tiporeg_solcc-admin/', tag: 'tiporeg_solcc-admin' },
+  { route: '/tipoerror_cc_saaim3-admin/', tag: 'tipoerror_cc_saaim3-admin' },
+  { route: '/error_solcc-admin/', tag: 'error_solcc-admin' },
   { route: '/moneda-add/', tag: 'moneda-add' },
   { route: '/entidadinegi-add/', tag: 'entidadinegi-add' },
   { route: '/tipocambio_facturacion-add/', tag: 'tipocambio_facturacion-add' },
@@ -211,6 +258,14 @@ var routes = [
   { route: '/tipo_registro_saaim3-add/', tag: 'tipo_registro_saaim3-add' },
   { route: '/tipoerror_saaim3-add/', tag: 'tipoerror_saaim3-add' },
   { route: '/error_saaim3-add/', tag: 'error_saaim3-add' },
+  { route: '/error_pagoe-add/', tag: 'error_pagoe-add' },
+  { route: '/acting_catalogo-add/', tag: 'acting_catalogo-add' },
+  { route: '/catalogoeventosac-add/', tag: 'catalogoeventosac-add' },
+  { route: '/tipo_registro_cc_saaim3-add/', tag: 'tipo_registro_cc_saaim3-add' },
+  { route: '/error_cc_saaim3-add/', tag: 'error_cc_saaim3-add' },
+  { route: '/tiporeg_solcc-add/', tag: 'tiporeg_solcc-add' },
+  { route: '/tipoerror_cc_saaim3-add/', tag: 'tipoerror_cc_saaim3-add' },
+  { route: '/error_solcc-add/', tag: 'error_solcc-add' },
   { route: '/moneda-edit/', tag: 'moneda-edit' },
   { route: '/entidadinegi-edit/', tag: 'entidadinegi-edit' },
   { route: '/tipocambio_facturacion-edit/', tag: 'tipocambio_facturacion-edit' },
@@ -227,6 +282,14 @@ var routes = [
   { route: '/tipo_registro_saaim3-edit/', tag: 'tipo_registro_saaim3-edit' },
   { route: '/tipoerror_saaim3-edit/', tag: 'tipoerror_saaim3-edit' },
   { route: '/error_saaim3-edit/', tag: 'error_saaim3-edit' },
+  { route: '/error_pagoe-edit/', tag: 'error_pagoe-edit' },
+  { route: '/acting_catalogo-edit/', tag: 'acting_catalogo-edit' },
+  { route: '/catalogoeventosac-edit/', tag: 'catalogoeventosac-edit' },
+  { route: '/tipo_registro_cc_saaim3-edit/', tag: 'tipo_registro_cc_saaim3-edit' },
+  { route: '/error_cc_saaim3-edit/', tag: 'error_cc_saaim3-edit' },
+  { route: '/tiporeg_solcc-edit/', tag: 'tiporeg_solcc-edit' },
+  { route: '/tipoerror_cc_saaim3-edit/', tag: 'tipoerror_cc_saaim3-edit' },
+  { route: '/error_solcc-edit/', tag: 'error_solcc-edit' },
   { route: '/moneda-delete/', tag: 'moneda-delete' },
   { route: '/entidadinegi-delete/', tag: 'entidadinegi-delete' },
   { route: '/tipocambio_facturacion-delete/', tag: 'tipocambio_facturacion-delete' },
@@ -242,6 +305,14 @@ var routes = [
   { route: '/unidadmedida-delete/', tag: 'unidadmedida-delete' },
   { route: '/tipo_registro_saaim3-delete/', tag: 'tipo_registro_saaim3-delete' },
   { route: '/tipoerror_saaim3-delete/', tag: 'tipoerror_saaim3-delete' },
-  { route: '/error_saaim3-delete/', tag: 'error_saaim3-delete' }
+  { route: '/error_saaim3-delete/', tag: 'error_saaim3-delete' },
+  { route: '/error_pagoe-delete/', tag: 'error_pagoe-delete' },
+  { route: '/acting_catalogo-delete/', tag: 'acting_catalogo-delete' },
+  { route: '/catalogoeventosac-delete/', tag: 'catalogoeventosac-delete' },
+  { route: '/tipo_registro_cc_saaim3-delete/', tag: 'tipo_registro_cc_saaim3-delete' },
+  { route: '/error_cc_saaim3-delete/', tag: 'error_cc_saaim3-delete' },
+  { route: '/tiporeg_solcc-delete/', tag: 'tiporeg_solcc-delete' },
+  { route: '/tipoerror_cc_saaim3-delete/', tag: 'tipoerror_cc_saaim3-delete' },
+  { route: '/error_solcc-delete/', tag: 'error_solcc-delete' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

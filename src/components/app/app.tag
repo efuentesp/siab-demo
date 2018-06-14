@@ -54,7 +54,30 @@
 			<side-menu icon="fa fa-group" label="Error_SAAIM3">
 				<menu-item to="/error_saaim3-admin/" label="Administración"/>
 			</side-menu>
-			</menu-section>
+			<side-menu icon="fa fa-group" label="Error_PagoE">
+				<menu-item to="/error_pagoe-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Acting_Catalogo">
+				<menu-item to="/acting_catalogo-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="CatalogoEventoSAC">
+				<menu-item to="/catalogoeventosac-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Tipo_Registro_CC_SAAIM3">
+				<menu-item to="/tipo_registro_cc_saaim3-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="TipoError_CC_SAAIM3">
+				<menu-item to="/tipoerror_cc_saaim3-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Error_CC_SAAIM3">
+				<menu-item to="/error_cc_saaim3-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="TipoReg_SolCC">
+				<menu-item to="/tiporeg_solcc-admin/" label="Administración"/>
+			</side-menu>
+			<side-menu icon="fa fa-group" label="Error_SolCC">
+				<menu-item to="/error_solcc-admin/" label="Administración"/>
+			</side-menu>
 			</sidebar-menu>
 
 	</sidebar>

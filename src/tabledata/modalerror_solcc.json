@@ -1,0 +1,39 @@
+
+	{"ids":[
+	    {
+	      "id": "error_solcc-results",
+	      "headers": [
+		  
+{ "label": "Tipo Registro" },
+		  
+{ "label": "Campo" },
+		  
+{ "label": "Consecutivo" },
+		  
+{ "label": "Tipo Error" },
+		  
+{ "label": "Descripción" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

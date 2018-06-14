@@ -1,0 +1,31 @@
+
+	{"ids":[
+	    {
+	      "id": "tipo_registro_cc_saaim3-results",
+	      "headers": [
+		  
+{ "label": "Número Tipo Registro" },
+		  
+{ "label": "Descripción Tipo Registro" },
+		  
+{ "label": "Abreviatura Tipo Registro" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

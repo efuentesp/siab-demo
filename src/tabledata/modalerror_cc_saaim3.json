@@ -1,0 +1,39 @@
+
+	{"ids":[
+	    {
+	      "id": "error_cc_saaim3-results",
+	      "headers": [
+		  
+{ "label": "Tipo Error" },
+		  
+{ "label": "Tipo Registro" },
+		  
+{ "label": "Número Campo" },
+		  
+{ "label": "Consecutivo" },
+		  
+{ "label": "Descripción Error" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

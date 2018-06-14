@@ -1,0 +1,31 @@
+
+	{"ids":[
+	    {
+	      "id": "acting_catalogo-results",
+	      "headers": [
+		  
+{ "label": "Número Acting" },
+		  
+{ "label": "Producto Generico" },
+		  
+{ "label": "Código ACTING" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}

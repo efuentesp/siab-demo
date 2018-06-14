@@ -1,0 +1,31 @@
+
+	{"ids":[
+	    {
+	      "id": "catalogoeventosac-results",
+	      "headers": [
+		  
+{ "label": "Número Evento" },
+		  
+{ "label": "Descripción Evento" },
+		  
+{ "label": "Empresa" },
+		  
+{ "label": "Estatus" }
+	      ],
+	      "rows": [
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] },
+	      	{ "id": "XXX", "data": [
+"XXX",
+"XXX",
+"XXX",
+"XXX"
+	      	] }
+	      ]
+	    }
+	  ]
+	}
