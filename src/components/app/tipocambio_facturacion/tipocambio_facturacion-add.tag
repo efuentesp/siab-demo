@@ -21,7 +21,7 @@
 				<div class="form-group">
 				<!-- Modal -->
 				<search-box id="searchboxsample" link="Monedamodal" caption="Moneda" placeholder="Moneda" />
-				<modal-box id="Monedamodal"  data="moneda-results" title="Seleccionar Moneda " action="select-multi" pagination="true"/>
+				<modal-box id="Monedamodal"  link="searchboxsample" data="moneda-results" title="Seleccionar Moneda " action="select-multi" pagination="true"/>
 				</div>
 					        </div>
 			</div>

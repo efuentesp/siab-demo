@@ -18,8 +18,8 @@
 			if ( this.parent.opts.id && this.parent.opts.type == 'select' ) {
 				var s = null;
 				var d = document.getElementsByTagName('div')[this.parent.opts.id];
-				if (document.getElementsByTagName('select')[this.parent.opts.id]) {
-					s = document.getElementsByTagName('select')[this.parent.opts.id];
+				if (document.getElementsByTagName('select')["selectbox-" + this.parent.opts.id]) {
+					s = document.getElementsByTagName('select')["selectbox-" + this.parent.opts.id];
 				} else {
 					s = document.createElement('select');
 					var plcholder = document.createElement('option');
@@ -31,7 +31,7 @@
 						plcholder.selected = "selected";
 					}
 					
-					s.id = this.parent.opts.id;
+					s.id = "selectbox-" + this.parent.opts.id;
 					s.setAttribute("class", "form-control");
 					s.add(plcholder);
 					d.appendChild(s)

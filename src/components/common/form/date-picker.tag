@@ -3,7 +3,7 @@
 	<label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
 	<fieldset>
 		<div class="xdisplay_inputx form-group has-feedback" id={ opts.id } >
-			<input type="text" placeholder={opts.placeholder} id={ "i-date-" + opts.id } class="form-control has-feedback-left" />
+			<input type="text" placeholder={opts.placeholder} id={ "date-picker-" + opts.id } class="form-control has-feedback-left" />
 			<span class="fa fa-calendar-o form-control-feedback left">
 				<span></span>
 			</span>
@@ -37,7 +37,7 @@
 
 		function showPicker(id, dateFormat, minDate, maxDate, value){
 
-			var iDatePicker = document.getElementById("i-date-" + opts.id);
+			var iDatePicker = document.getElementById("date-picker-" + opts.id);
 
 			$(id).datepicker({
 				format: dateFormat,

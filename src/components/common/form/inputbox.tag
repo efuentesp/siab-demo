@@ -6,7 +6,7 @@
 		<span class= { iboxClass() }>
 			<i class={ iboxIcon() }></i>
 		</span>
-		<input type={opts.type} name={opts.id}3 class="form-control" name={opts.id}1 placeholder={opts.placeholder} value={opts.value} >
+		<input type={ iboxType() } id={"inputbox-" + opts.id} name={opts.id}3 class="form-control" placeholder={opts.placeholder} value={opts.value} >
 	</div>
 	<span id={opts.id}2 class="help-block"></span>
 
@@ -36,6 +36,26 @@
 				break;
 			default:
 				return inputboxes[4].inputbox.icon;
+				break;
+		}
+	}
+	
+	this.iboxType = function() {
+		switch (opts.type){
+			case 'email':
+				return 'email';
+				break;
+			case 'text':
+				return 'text';
+				break;
+			case 'number':
+				return 'number'
+				break;
+			case 'password':
+				return 'password'
+				break;
+			default:
+				'text'
 				break;
 		}
 	}

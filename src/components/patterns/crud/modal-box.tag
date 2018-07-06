@@ -35,7 +35,9 @@
 								
 			var totalCells = document.getElementById('modal-' + opts.id)
 								     .getElementsByTagName('tbody')[0].rows[0].cells.length;
-									 
+						
+
+			console.log(this)
 			var textBox = document.getElementById(opts.link)
 			                      .getElementsByTagName('input')[0];
 									 
@@ -48,7 +50,7 @@
 				if ( table.rows[r].cells[0].getElementsByTagName('input')[0].checked ){
 					for (var c = 1; c < totalCells; c++){
 						var value = table.rows[r].cells[c].innerHTML.trim().toLowerCase();
-						if ( value && ! value.includes("button") ){
+						if ( value && ! value.includes("button") && ! value.includes("div")){
 							dataRow.push(table.rows[r].cells[c].innerHTML.trim());
 						}					
 					}
@@ -64,7 +66,7 @@
 	<div class="input-group">
 	  <input type="text" class="form-control" placeholder={opts.placeholder}>
 	  <span class="input-group-btn">
-		  <button type="button" class="btn btn-default" data-toggle="modal" data-target=".{opts.link}" onclick={ getTableData }>
+		  <button type="button" id={ "search-" + opts.id } class="btn btn-default" data-toggle="modal" data-target=".{opts.link}" onclick={ getTableData }>
 		   <i class="fa fa-search"></i>
 		  </button>
 	  </span>

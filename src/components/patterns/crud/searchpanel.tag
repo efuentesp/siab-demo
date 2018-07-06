@@ -12,7 +12,7 @@
 	 </formbox>
 	 <panel label="Resultados de búsqueda">
 		 <div if={this.parent.parent.opts.add}>
-			  <submit-button to={ this.parent.parent.opts.add } action="add"></submit-button>
+			  <submit-button id={ "plus-" + this.parent.parent.parent.parent.opts.id } to={ this.parent.parent.opts.add } action="add"></submit-button>
 		 </div>
 	 </panel>
 </searchcriteria>
